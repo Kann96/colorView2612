@@ -30,15 +30,15 @@ final class ViewController: UIViewController {
     // MARK: IBAction
     @IBAction func redSliderAction() {
         redLabel.text = String(format: "%.2f", redSlider.value)
-        сolorRectangle.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
+        changeColor()
     }
     @IBAction func greenSliderAction() {
         greenLable.text = String(format: "%.2f", greenSlider.value)
-        сolorRectangle.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
+        changeColor()
     }
     @IBAction func blueSliderAction() {
         blueLabel.text = String(format: "%.2f", blueSlider.value)
-        сolorRectangle.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
+        changeColor()
     }
     
     
@@ -54,6 +54,11 @@ final class ViewController: UIViewController {
         greenLable.text = greenSlider.value.formatted()
         blueLabel.text = blueSlider.value.formatted()
     }
+    
+    private func changeColor() {
+        сolorRectangle.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
+    }
+    
 }
 
 
